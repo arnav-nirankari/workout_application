@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'assets/colors.dart';
-import 'widgets/HomePageGrid.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -306,9 +305,9 @@ class _HomePageState extends State<HomePage> {
                   )
                 ],
               ),
-              SizedBox(
-                height: 10,
-              ),
+              // const SizedBox(
+              //   height: 10,
+              // ),
               Expanded(
                   child: OverflowBox(
                 maxWidth: MediaQuery.of(context).size.width,
@@ -318,8 +317,8 @@ class _HomePageState extends State<HomePage> {
                       return Row(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(
-                                right: 30, bottom: 20, left: 20),
+                            margin: const EdgeInsets.only(
+                                right: 30, bottom: 20, left: 20, top: 10),
                             height: MediaQuery.of(context).size.height * 0.19,
                             width: MediaQuery.of(context).size.width * 0.4,
                             padding: const EdgeInsets.only(bottom: 10),
@@ -357,7 +356,7 @@ class _HomePageState extends State<HomePage> {
                             )),
                           ),
                           Container(
-                            margin: EdgeInsets.only(bottom: 20),
+                            margin: EdgeInsets.only(bottom: 20, top: 10),
                             height: MediaQuery.of(context).size.height * 0.19,
                             width: MediaQuery.of(context).size.width * 0.4,
                             padding: const EdgeInsets.only(bottom: 10),
