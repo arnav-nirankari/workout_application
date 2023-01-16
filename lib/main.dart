@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'HomePage.dart';
+import 'VideoInfo.dart';
+import 'assets/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +29,11 @@ class MyApp extends StatelessWidget {
       ),
       home: const HomePage(),
       debugShowCheckedModeBanner: false,
+      initialRoute: "/home",
+      routes: {
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.videoRoute: (context) => VideoInfo(),
+      },
     );
   }
 }

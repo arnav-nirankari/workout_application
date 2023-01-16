@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:ui';
-
+import 'assets/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -92,10 +92,14 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(
                     width: 10,
                   ),
-                  Icon(
-                    Icons.arrow_forward,
-                    color: AppColor.homePageIcons,
-                    size: 20,
+                  InkWell(
+                    onTap: () =>
+                        {Navigator.pushNamed(context, MyRoutes.videoRoute)},
+                    child: Icon(
+                      Icons.arrow_forward,
+                      color: AppColor.homePageIcons,
+                      size: 20,
+                    ),
                   ),
                 ],
               ),
